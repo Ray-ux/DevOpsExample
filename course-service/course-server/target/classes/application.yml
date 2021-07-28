@@ -1,0 +1,19 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: course-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.118.139:8849
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.118.139:3306/ray_course?useSSL=false&serverTimezone=Hongkong&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

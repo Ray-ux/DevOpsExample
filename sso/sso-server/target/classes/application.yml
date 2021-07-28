@@ -1,0 +1,13 @@
+jwt:
+  secret: rayux
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.118.139:8849
+  application:
+    name: sso
+server:
+  port: 8083

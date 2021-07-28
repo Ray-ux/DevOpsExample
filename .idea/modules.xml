@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DevOpsPractice.iml" filepath="$PROJECT_DIR$/.idea/DevOpsPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-service/course-common/course-common.iml" filepath="$PROJECT_DIR$/course-service/course-common/course-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-service/course-server/course-server.iml" filepath="$PROJECT_DIR$/course-service/course-server/course-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-service/course-service.iml" filepath="$PROJECT_DIR$/course-service/course-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message-service/message-client/message-client.iml" filepath="$PROJECT_DIR$/message-service/message-client/message-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message-service/message-common/message-common.iml" filepath="$PROJECT_DIR$/message-service/message-common/message-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message-service/message-server/message-server.iml" filepath="$PROJECT_DIR$/message-service/message-server/message-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/message-service/message-service.iml" filepath="$PROJECT_DIR$/message-service/message-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso.iml" filepath="$PROJECT_DIR$/sso/sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-client/sso-client.iml" filepath="$PROJECT_DIR$/sso/sso-client/sso-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sso/sso-server/sso-server.iml" filepath="$PROJECT_DIR$/sso/sso-server/sso-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service/user-client/user-client.iml" filepath="$PROJECT_DIR$/user-service/user-client/user-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service/user-common/user-common.iml" filepath="$PROJECT_DIR$/user-service/user-common/user-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service/user-server/user-server.iml" filepath="$PROJECT_DIR$/user-service/user-server/user-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
+    </modules>
+  </component>
+</project>

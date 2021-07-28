@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ray.user.mapper.UserMapper">
+    <resultMap id="user" type="com.ray.entity.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="mobile" column="mobile"/>
+    </resultMap>
+    <insert id="insertStu">
+        insert into user(id, name, password, email,mobile)
+        values (#{id}, #{name}, #{password}, #{email},#{mobile});
+    </insert>
+    <select id="findStuByNameAndPwd" resultMap="user">
+        select *
+        from user
+        where name = #{name}
+          and password = #{password};
+
+    </select>
+    <select id="findStuById" resultMap="user">
+        select *
+        from user
+        where id = #{id};
+
+    </select>
+
+
+</mapper>

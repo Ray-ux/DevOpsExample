@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sso-client" />
+        <module name="message-common" />
+        <module name="course-common" />
+        <module name="user-server" />
+        <module name="message-client" />
+        <module name="user-client" />
+        <module name="sso-server" />
+        <module name="user-common" />
+        <module name="message-server" />
+        <module name="course-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="course-common" target="8" />
+      <module name="course-server" target="1.8" />
+      <module name="course-service" target="8" />
+      <module name="demo" target="7" />
+      <module name="message-client" target="1.5" />
+      <module name="message-common" target="1.5" />
+      <module name="message-server" target="1.8" />
+      <module name="message-service" target="1.5" />
+      <module name="sso" target="8" />
+      <module name="sso-client" target="8" />
+      <module name="sso-server" target="1.8" />
+      <module name="user-client" target="8" />
+      <module name="user-common" target="8" />
+      <module name="user-server" target="1.8" />
+      <module name="user-service" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="course-server" options="-parameters" />
+      <module name="message-client" options="" />
+      <module name="message-server" options="-parameters" />
+      <module name="message-service" options="-parameters" />
+      <module name="sso-server" options="-parameters" />
+      <module name="user-server" options="-parameters" />
+    </option>
+  </component>
+</project>

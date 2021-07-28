@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  mail:
+#    邮箱地址
+    username: 1437927944@qq.com
+#    授权码
+    password: rjtkjmooxcsygifg
+    host: smtp.qq.com
+    port: 465
+    default-encoding: UTF-8
+    protocol: smtps
+  redis:
+    host: 192.168.118.139
+  application:
+    name: message-service
+  cloud:
+    nacos:
+      discovery:
+#        注册中心地址
+        server-addr: 192.168.118.139:8849
