@@ -128,7 +128,7 @@ public class JwtOperator {
         System.out.println(token);
 
         // 将我改成上面生成的token!!!
-        String someToken = "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJpYXQiOjE2MTg0MDE3NTEsImV4cCI6MTYxOTYxMTM1MX0.WIhPzzFMkHIErQv9Dj7xHUHKvrEtJuZTrTmVIkUdanQ";
+        String someToken = "eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJpYXQiOjE2Mjc3NDMyNzYsImV4cCI6MTYyODk1Mjg3Nn0.aoD8gP1AREcD52ntM2ikIgmBWByFWysOPDdBrEd1OFU";
         // 测试2: 如果能token合法且未过期，返回true
         Boolean validateToken = jwtOperator.validateToken(someToken);
         System.out.println(validateToken);
@@ -149,8 +149,8 @@ public class JwtOperator {
 //        byte[] payload = Base64.decodeBase64(encodedPayload.getBytes());
 //        System.out.println(new String(payload));
 
-        // 测试6: 这是一个被篡改的token，因此会报异常，说明JWT是安全的
-//        jwtOperator.validateToken("eyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJpYXQiOjE1NjU1ODk3MzIsImV4cCI6MTU2Njc5OTMzMn0.nDv25ex7XuTlmXgNzGX46LqMZItVFyNHQpmL9UQf-aUx");
+//         测试6: 这是一个被篡改的token，因此会报异常，说明JWT是安全的
+//        jwtOperator.validateToken("AyJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJpYXQiOjE1NjU1ODk3MzIsImV4cCI6MTU2Njc5OTMzMn0.nDv25ex7XuTlmXgNzGX46LqMZItVFyNHQpmL9UQf-aUx");
     }
 }
 

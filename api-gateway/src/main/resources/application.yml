@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.118.139:8849
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+       - id: user
+         uri: lb://user-service
+         predicates:
+           - Path=/user/**
+       - id: course
+         uri: lb://course-service
+         predicates:
+           - Path=/course/**
+       - id: sso-service
+         uri: lb://sso-service
+         predicates:
+           - Path=/sso/**
+server:
+  port: 8080

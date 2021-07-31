@@ -30,12 +30,12 @@ public abstract class SsoFilter implements Filter{
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
-        String token = request.getHeader("X-token");
+        String token = request.getHeader("X-Token");
         if (null == token) {
             Cookie[] cookies = request.getCookies();
             if (cookies != null) {
                 for (Cookie cookie : cookies) {
-                    if ("X-token".equals(cookie.getName())) {
+                    if ("X-Token".equals(cookie.getName())) {
                         token = cookie.getValue();
                     }
                 }
@@ -44,20 +44,21 @@ public abstract class SsoFilter implements Filter{
         log.info("token:{}", token);
         if (token == null) {
             log.error("token不存在");
-            response.sendRedirect("http://localhost:8082/user/toLogin");
+            response.sendRedirect("http://localhost:8080/user/toLogin");
             return;
         }
         Boolean flag = false;
         try {
+            log.info("开始校验token");
             flag = jwtOperator.validateToken(token);
         } catch (Exception e) {
             log.error("token已被篡改");
-            response.sendRedirect("http://localhost:8082/user/toLogin");
+            response.sendRedirect("http://localhost:8080/user/toLogin");
             return;
         }
         if (!flag) {
             log.warn("token已过期");
-            response.sendRedirect("http://localhost:8082/user/toLogin");
+            response.sendRedirect("http://localhost:8080/user/toLogin");
             return;
         }
         Claims claimsFromToken = jwtOperator.getClaimsFromToken(token);
