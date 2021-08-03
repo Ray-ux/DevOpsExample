@@ -98,4 +98,64 @@ SET FOREIGN_KEY_CHECKS = 1;
 - 查看所有课程
 - 查看学生选课情况
 
-#### 网关服务
+### 网关服务
+
+#### 主要功能
+
+- 通过路径分发到不同的服务
+
+### 实现CI/CD
+
+Gitlab+Jenkins+k8s
+
+#### 流程图
+客户端push代码到git仓库触发webhook就可以触发jenkins与k8s的持续集成及部署
+![img.png](img.png)
+#### 步骤
+
+- 安装docker环境
+- 安装Harbor作为镜像仓库
+- 准备kubernetes集群环境，并部署好我们上面的微服务
+- 安装Gitlab与Jenkins
+- 配置Webhook
+- 配置Jenkins:不勾选防止跨站点请求，勾选Allow anonymous read access
+- 写脚本
+```groovy
+#!groovy
+pipeline{
+    agent any
+    
+    stages{
+        stage('获取代码'){
+            steps{
+                echo "start fetch code from git:仓库地址"
+                ###待执行的操作
+            }
+        }
+        stage('静态分析'){
+            steps{
+                echo "start code check"
+                ###待执行的操作
+            }
+        }
+        stage('编译+单元测试'){
+            steps{
+                echo "start compile"
+                ###待执行的操作
+            }
+        }
+         stage('构建镜像'){
+            steps{
+                echo "start build image"
+                ###待执行的操作
+            }
+        }
+         stage('更新发布'){
+            steps{
+                echo "start deploy"
+                ###待执行的操作
+            }
+        }
+    }
+}
+```

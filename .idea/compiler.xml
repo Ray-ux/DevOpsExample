@@ -10,6 +10,7 @@
         <module name="message-common" />
         <module name="course-common" />
         <module name="user-server" />
+        <module name="api-gateway" />
         <module name="message-client" />
         <module name="user-client" />
         <module name="sso-server" />
@@ -19,10 +20,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
       <module name="course-common" target="8" />
       <module name="course-server" target="1.8" />
       <module name="course-service" target="8" />
-      <module name="demo" target="7" />
+      <module name="demo" target="1.8" />
       <module name="message-client" target="1.5" />
       <module name="message-common" target="1.5" />
       <module name="message-server" target="1.8" />
@@ -38,7 +40,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="course-server" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="message-client" options="" />
       <module name="message-server" options="-parameters" />
       <module name="message-service" options="-parameters" />
