@@ -3,6 +3,10 @@
 ### 数据库设计
 本项目重点在于DevOps因此数据库设计较为简单:  
 
+### 架构图
+这里的架构设计的并不够好，其中单点登陆服务并不具备通用性，只能针对本项目使用。  
+
+![img_1.png](img_1.png)
 **安装mysql：**
 ```shell
 1.cd / & mkdir dockemysql
@@ -16,7 +20,10 @@ default-character-set=utf8
 character-set-server=utf8mb4
 4.docker run --name ray-mysql -v /dockermysql/conf:/etc/mysql/conf.d -v /dockermysql/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 ```
-
+**安装redis**
+```shell
+docker run -d --name ray_redis -p 6379:6379 redis:6.0
+```
 **课程服务：**
 ```mysql
 CREATE DATABASE ray_course;
@@ -109,7 +116,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 Gitlab+Jenkins+k8s
 
 #### 流程图
-客户端push代码到git仓库触发webhook就可以触发jenkins与k8s的持续集成及部署
+客户端push代码到git仓库触发webhook就可以触发jenkins与k8s的持续集成及部署  
 
 ![img.png](img.png)
 #### 步骤
