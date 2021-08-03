@@ -6,7 +6,8 @@
 ### 架构图
 这里的架构设计的并不够好，其中单点登陆服务并不具备通用性，只能针对本项目使用。  
 
-![img_1.png](img_1.png)
+![img_1.png](img_1.png)  
+
 **安装mysql：**
 ```shell
 1.cd / & mkdir dockemysql
@@ -118,7 +119,8 @@ Gitlab+Jenkins+k8s
 #### 流程图
 客户端push代码到git仓库触发webhook就可以触发jenkins与k8s的持续集成及部署  
 
-![img.png](img.png)
+![img.png](img.png)  
+
 #### 步骤
 
 - 安装docker环境
